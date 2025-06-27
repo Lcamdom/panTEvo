@@ -42,7 +42,7 @@ vg pack -x $LOCAL_XG -g ${POP}_alignments.gam -o ${POP}_alignments.pack
 
 # Call variants
 echo "Calling variants for $POP"
-vg call $LOCAL_XG -k ${POP}_alignments.pack > ${POP}.vcf
+vg call -a $LOCAL_XG -k ${POP}_alignments.pack > ${POP}.vcf
 
 # Remove the local copy of the xg file
 rm $LOCAL_XG
